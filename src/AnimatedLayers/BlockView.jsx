@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { withBlockExtensions } from '@plone/volto/helpers';
 import './static/style/block.less';
+import { Link } from 'react-router-dom';
 
-const defaultAnimationLayers = [];
+const defaultEmptyList = [];
 
 const AnimatedLayersBlockView = (props) => {
-  const layers = props.data.layers || defaultAnimationLayers;
+  const layers = props.data.layers || defaultEmptyList;
+  const buttons = props.data.buttons || defaultEmptyList;
   const [layerStates, setLayerStates] = useState([]);
 
   useEffect(() => {
@@ -56,15 +58,11 @@ const AnimatedLayersBlockView = (props) => {
   return (
     <>
       <div className="animated-layers-block">
-        <div className="bg-mouse-effect">
-          <div className="bg-wave"></div>
-          <div className="mouse-color"></div>
-        </div>
         <div className="grid-layer"></div>
         <div className="sitemap-container">
           <div className="column homepage">
-            <h1>{props.data.title}</h1>
-            <h2>{props.data.description}</h2>
+            <div className="block-title">{props.data.title}</div>
+            <div className="block-description">{props.data.description}</div>
             <div className="layers">
               {layers
                 ? layers.map((layer, idx) => (
@@ -78,6 +76,15 @@ const AnimatedLayersBlockView = (props) => {
                       />{' '}
                       {layer.label}
                     </div>
+                  ))
+                : null}
+            </div>
+            <div className="buttons-wrapper">
+              {buttons
+                ? buttons.map((button, idx) => (
+                    <Link to={button.link[0]['@id']} key={idx} className={'btn btn-call-to-action'}>
+                      {button.label}
+                    </Link>
                   ))
                 : null}
             </div>

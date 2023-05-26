@@ -48,6 +48,33 @@ const AnimationLayerSchema = () => ({
   required: ['label', 'animation'],
 });
 
+const CallToActionButtonSchema = () => ({
+  title: 'Button',
+  fieldsets: [
+    {
+      id: 'default',
+      title: 'Default',
+      fields: ['label', 'link'],
+    },
+  ],
+  properties: {
+    label: {
+      title: 'Label',
+      description: 'Label of the Link',
+      default: '',
+    },
+    link: {
+      title: 'Link',
+      description: 'External or Internal Link.',
+      widget: 'object_browser',
+      mode: 'single',
+      return: 'single',
+      allowExternals: true,
+    },
+  },
+  required: ['label', 'link'],
+});
+
 export const AnimatedLayersSchema = (props) => {
   return {
     required: [],
@@ -55,7 +82,7 @@ export const AnimatedLayersSchema = (props) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['title', 'description', 'layers'],
+        fields: ['title', 'description', 'layers', 'buttons'],
       },
     ],
     properties: {
@@ -71,8 +98,14 @@ export const AnimatedLayersSchema = (props) => {
       },
       layers: {
         title: 'Animation Layers',
-        description: 'Add Animation Layers here.',
+        description: 'Add Animation Layers.',
         schema: AnimationLayerSchema({}),
+        widget: 'object_list',
+      },
+      buttons: {
+        title: 'Call to Action Buttons',
+        description: 'Add a Call to Action Button.',
+        schema: CallToActionButtonSchema({}),
         widget: 'object_list',
       },
     },
