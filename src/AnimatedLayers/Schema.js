@@ -4,7 +4,7 @@ const AnimationLayerSchema = () => ({
     {
       id: 'default',
       title: 'Default',
-      fields: ['label', 'animation', 'size', 'top', 'left'],
+      fields: ['label', 'animation', 'visible', 'size', 'top', 'left'],
     },
   ],
   properties: {
@@ -23,6 +23,11 @@ const AnimationLayerSchema = () => ({
       mode: 'single',
       return: 'single',
       allowExternals: true,
+    },
+    visible: {
+      title: 'Visible',
+      description: 'Initially Visible?',
+      type: 'boolean',
     },
     size: {
       title: 'Scale Size',
@@ -50,10 +55,20 @@ export const AnimatedLayersSchema = (props) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['layers'],
+        fields: ['title', 'description', 'layers'],
       },
     ],
     properties: {
+      title: {
+        title: 'Title',
+        description: 'Title of the Block (left side).',
+        default: '',
+      },
+      description: {
+        title: 'Description',
+        description: 'Description of the Block (left side).',
+        default: '',
+      },
       layers: {
         title: 'Animation Layers',
         description: 'Add Animation Layers here.',

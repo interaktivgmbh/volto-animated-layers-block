@@ -1,115 +1,115 @@
 .animated-layers-block {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  overflow: hidden;
   min-height: 85vh;
-  background-color: #fff;
-  background-image: linear-gradient(90deg, #fff 33%, rgba(41, 98, 255, .1) 66%);
   align-items: center;
   padding-top: 40px;
   padding-bottom: 80px;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
+  background-color: #fff;
+  background-image: linear-gradient(90deg, #fff 33%, rgba(41, 98, 255, 0.1) 66%);
 
   .bg-mouse-effect {
-    z-index: -4;
-    width: 0;
-    height: 0;
-    justify-content: center;
-    align-items: center;
-    display: flex;
     position: absolute;
+    z-index: -4;
     top: 0;
+    right: auto;
     bottom: auto;
     left: 0;
-    right: auto;
+    display: flex;
+    width: 0;
+    height: 0;
+    align-items: center;
+    justify-content: center;
 
     .bg-wave {
-      z-index: -3;
-      width: 50px;
-      height: 50px;
-      opacity: 0;
-      border: 5px solid #2962ff;
-      border-radius: 50%;
-      margin-top: auto;
-      margin-bottom: auto;
       position: absolute;
+      z-index: -3;
       top: 0;
+      right: auto;
       bottom: auto;
       left: 0;
-      right: auto;
+      width: 50px;
+      height: 50px;
+      border: 5px solid #2962ff;
+      margin-top: auto;
+      margin-bottom: auto;
+      border-radius: 50%;
       box-shadow: inset 0 0 3px #2962ff;
+      opacity: 0;
     }
 
     .mouse-color {
-      min-height: 50px;
-      min-width: 50px;
-      opacity: .5;
-      background-image: radial-gradient(circle, #2962ff 50%, #f5f8fa);
-      border-radius: 25%;
-      display: none;
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
+      display: none;
+      min-width: 50px;
+      min-height: 50px;
+      background-image: radial-gradient(circle, #2962ff 50%, #f5f8fa);
+      border-radius: 25%;
+      opacity: 0.5;
     }
   }
 
   .grid-layer {
+    position: absolute;
     z-index: -3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-image: url(../images/square_background.svg);
     background-position: 50%;
     background-size: 20px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
   }
 
   .sitemap-container {
+    position: relative;
     z-index: 10;
-    min-width: 1020px;
-    justify-content: space-between;
-    align-items: center;
     display: flex;
     width: 100%;
+    min-width: 1020px;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 4%;
+    align-items: center;
+    justify-content: space-between;
     padding-right: 4%;
-    position: relative;
+    padding-left: 4%;
+    margin-right: auto;
+    margin-left: auto;
 
     .column {
+      position: relative;
       z-index: 2;
       min-width: 360px;
       padding-top: 10px;
       padding-bottom: 0;
-      position: relative;
 
       &.homepage {
-        max-width: 600px;
         min-width: 524px;
+        max-width: 600px;
 
         .layers {
+          display: flex;
           width: 600px;
           min-width: 600px;
-          grid-column-gap: 0;
-          justify-content: flex-start;
           flex-wrap: wrap;
-          display: flex;
+          justify-content: flex-start;
+          grid-column-gap: 0;
         }
       }
 
       &.animation-layers {
         z-index: -3;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-right: 0;
-        transition: transform .2s;
         width: 100%;
         height: 400px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
+        transition: transform 0.2s;
 
         .layers {
           position: relative;
