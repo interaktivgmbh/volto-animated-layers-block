@@ -31,17 +31,17 @@ const AnimationLayerSchema = () => ({
     },
     size: {
       title: 'Scale Size',
-      description: 'Scale factor of the animated Layer.',
+      description: 'Scale factor of the animated Layer. Range between 0 and 1.',
       default: '1.0',
     },
     top: {
       title: 'Position Top',
-      description: 'Css-Attribute "top". Set value in Percentage.',
+      description: 'Css-Attribute "top". Value is in Percentage.',
       default: '0',
     },
     left: {
       title: 'Position Left',
-      description: 'Css-Attribute "left". Set value in Pixels.',
+      description: 'Css-Attribute "left". Value is in Percentage.',
       default: '0',
     },
   },

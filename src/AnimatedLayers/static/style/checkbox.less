@@ -1,0 +1,48 @@
+@import 'colors';
+
+.toggler-wrapper {
+  position: relative;
+  display: block;
+  width: 45px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.toggler-wrapper input[type='checkbox'] {
+  display: none;
+}
+
+.toggler-wrapper input[type='checkbox']:checked + .toggler-slider {
+  background-color: @animatedLayersBlockCheckbockActiveColor;
+}
+
+.toggler-wrapper .toggler-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: @animatedLayersBlockCheckbockInactiveColor;
+  border-radius: 100px;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.toggler-wrapper .toggler-knob {
+  position: absolute;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.toggler-wrapper.style-1 input[type='checkbox']:checked + .toggler-slider .toggler-knob {
+  left: calc(100% - 19px - 3px);
+}
+
+.toggler-wrapper.style-1 .toggler-knob {
+  top: 3px;
+  left: 3px;
+  width: calc(25px - 6px);
+  height: calc(25px - 6px);
+  background-color: @animatedLayersBlockCheckbockKnobColor;
+  border-radius: 50%;
+}

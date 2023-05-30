@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { withBlockExtensions } from '@plone/volto/helpers';
 import './static/style/block.less';
 import { Link } from 'react-router-dom';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 const defaultEmptyList = [];
 
@@ -9,6 +10,8 @@ const AnimatedLayersBlockView = (props) => {
   const layers = props.data.layers || defaultEmptyList;
   const buttons = props.data.buttons || defaultEmptyList;
   const [layerStates, setLayerStates] = useState([]);
+
+  console.log(buttons);
 
   useEffect(() => {
     if (layers.length === 0) {
@@ -59,37 +62,73 @@ const AnimatedLayersBlockView = (props) => {
     <>
       <div className="animated-layers-block">
         <div className="grid-layer"></div>
-        <div className="sitemap-container">
-          <div className="column homepage">
+        <div className="columns">
+          <div className="column layers-selection">
             <div className="block-title">{props.data.title}</div>
             <div className="block-description">{props.data.description}</div>
             <div className="layers">
               {layers
                 ? layers.map((layer, idx) => (
                     <div className="layer" key={idx}>
-                      <input
-                        type="checkbox"
-                        className="layer-selector"
-                        data-layer={'layer-' + idx}
-                        data-label={layer.label}
-                        checked={layerStates[idx]}
-                      />{' '}
-                      {layer.label}
+                      <label className="toggler-wrapper style-1">
+                        <input
+                          type="checkbox"
+                          className="layer-selector"
+                          data-layer={'layer-' + idx}
+                          data-label={layer.label}
+                          checked={layerStates[idx]}
+                        />{' '}
+                        <div className="toggler-slider">
+                          <div className="toggler-knob"></div>
+                        </div>
+                      </label>
+                      <div className="layer-text">{layer.label}</div>
                     </div>
                   ))
                 : null}
             </div>
             <div className="buttons-wrapper">
-              {buttons
-                ? buttons.map((button, idx) => (
-                    <Link to={button.link[0]['@id']} key={idx} className={'btn btn-call-to-action'}>
-                      {button.label}
-                    </Link>
-                  ))
-                : null}
+              {buttons && buttons.length > 0 ? (
+                buttons.map((button, idx) => {
+                  if (button.link && Array.isArray(button.link) && button.link.length > 0) {
+                    // Internal Link
+                    return (
+                      <React.Fragment key={idx}>
+                        {button.link.map((link, linkIdx) => (
+                          <a
+                            href={link['@id']}
+                            key={linkIdx}
+                            target="_blank"
+                            rel="noreferrer"
+                            className={'btn btn-primary'}
+                          >
+                            {button.label}
+                          </a>
+                        ))}
+                      </React.Fragment>
+                    );
+                  } else if (button.link && typeof button.link === 'object') {
+                    // External Link
+                    return (
+                      <Link to={flattenToAppURL(button.link['@id'])} key={idx} className={'btn btn-primary'}>
+                        {button.label}
+                      </Link>
+                    );
+                  } else {
+                    // No Link
+                    return (
+                      <Link to="#" key={idx} className={'btn btn-primary btn-empty'}>
+                        {button.label}
+                      </Link>
+                    );
+                  }
+                })
+              ) : (
+                <></>
+              )}
             </div>
           </div>
-          <div className="column animation-layers">
+          <div className="column layers-result">
             <div className="layers">
               {layers
                 ? layers.map((layer, idx) => (
@@ -97,7 +136,7 @@ const AnimatedLayersBlockView = (props) => {
                       className="layer"
                       data-layer={'layer-' + idx}
                       key={idx}
-                      style={{ top: layer.top, left: layer.left, transform: `scale(${layer.size})` }}
+                      style={{ top: layer.top + '%', left: layer.left + '%', transform: `scale(${layer.size})` }}
                     >
                       {layer.animation?.length === 1 ? (
                         // eslint-disable-next-line jsx-a11y/alt-text
