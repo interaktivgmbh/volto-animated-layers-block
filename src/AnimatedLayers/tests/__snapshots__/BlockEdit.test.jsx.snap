@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Edit renders AnimatedLayers Edit component with data 1`] = `
+<div
+  className="animated-layers-block"
+>
+  <div
+    className="grid-layer"
+  />
+  <div
+    className="columns"
+  >
+    <div
+      className="column layers-selection"
+    >
+      <div
+        className="block-title"
+      >
+        Test-Title
+      </div>
+      <div
+        className="block-description"
+      >
+        Test-Description
+      </div>
+      <div
+        className="layers"
+      >
+        <div
+          className="layer"
+        >
+          <label
+            className="toggler-wrapper style-1"
+          >
+            <input
+              checked={true}
+              className="layer-selector"
+              data-label="Layer 1"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <div
+              className="toggler-slider"
+            >
+              <div
+                className="toggler-knob"
+              />
+            </div>
+          </label>
+          <div
+            className="layer-text"
+          >
+            Layer 1
+          </div>
+        </div>
+        <div
+          className="layer"
+        >
+          <label
+            className="toggler-wrapper style-1"
+          >
+            <input
+              checked={true}
+              className="layer-selector"
+              data-label="Layer 2"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <div
+              className="toggler-slider"
+            >
+              <div
+                className="toggler-knob"
+              />
+            </div>
+          </label>
+          <div
+            className="layer-text"
+          >
+            Layer 2
+          </div>
+        </div>
+      </div>
+      <div
+        className="buttons-wrapper"
+      >
+        <a
+          className="btn btn-primary"
+          href="https://test.com/test.svg"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Layer 1
+        </a>
+        <a
+          className="btn btn-primary"
+          href="/test.svg"
+          onClick={[Function]}
+        >
+          Layer 2
+        </a>
+      </div>
+    </div>
+    <div
+      className="column layers-result"
+    >
+      <div
+        className="layers"
+      >
+        <div
+          className="layer"
+          data-layer="layer-0"
+          style={
+            Object {
+              "left": "20%",
+              "opacity": "1",
+              "top": "10%",
+              "transform": "scale(0.5)",
+            }
+          }
+        >
+          <object
+            data="https://test.com/test.svg"
+            type="image/svg+xml"
+          />
+        </div>
+        <div
+          className="layer"
+          data-layer="layer-1"
+          style={
+            Object {
+              "left": "50%",
+              "opacity": "1",
+              "top": "0%",
+              "transform": "scale(1)",
+            }
+          }
+        >
+          <object
+            data="/++api++//test.svg/@@display-file-svg"
+            type="image/svg+xml"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Edit renders AnimatedLayers Edit component without data 1`] = `
+<div
+  className="animated-layers-block"
+>
+  <div
+    className="grid-layer"
+  />
+  <div
+    className="columns"
+  >
+    <div
+      className="column layers-selection"
+    >
+      <div
+        className="block-title"
+      >
+        
+      </div>
+      <div
+        className="block-description"
+      >
+        
+      </div>
+      <div
+        className="layers"
+      />
+      <div
+        className="buttons-wrapper"
+      />
+    </div>
+    <div
+      className="column layers-result"
+    >
+      <div
+        className="layers"
+      />
+    </div>
+  </div>
+</div>
+`;
