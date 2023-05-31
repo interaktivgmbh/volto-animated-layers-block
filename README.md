@@ -1,12 +1,14 @@
 # volto-download-block
 
-## Based on
-![Plone](https://img.shields.io/badge/Plone-6.0.0b3-blue.svg)
+The Volto block offers a solution for adding animated SVGs as layers on top of each
+other to give your frontpage a unique look. You have the flexibility to either utilize
+external SVGs or create your own animated SVGs, for instance, with the help of SVGator.
 
-## Builds
-[![master](https://code.interaktiv.de/interaktiv/volto/volto-animated-layers-block/badges/master/pipeline.svg?key_text=master)](https://code.interaktiv.de/interaktiv/volto/volto-download-block/pipelines?ref=master)
-[![release](https://code.interaktiv.de/interaktiv/volto/volto-animated-layers-block/badges/release/pipeline.svg?key_text=release)](https://code.interaktiv.de/interaktiv/volto/volto-download-block/pipelines?ref=release)
-[![dev](https://code.interaktiv.de/interaktiv/volto/volto-animated-layers-block/badges/dev/pipeline.svg?key_text=dev)](https://code.interaktiv.de/interaktiv/volto/volto-download-block/pipelines?ref=dev)
+If you prefer to use your own uploaded Plone File SVGs, you'll need to install
+the addon "interaktiv.volto_animated_layers_block" for the integration to work.
 
-## Addon installation guide
-[Volto Addon Master Readme](https://doku.interaktiv.de/cms/plone-cms/volto-addon-master-readme)
+
+## Build on
+![Plone](https://img.shields.io/badge/Plone-6.0.x-blue.svg)
+![Volto](https://img.shields.io/badge/Volto-16.x.x-yellow.svg)
+
