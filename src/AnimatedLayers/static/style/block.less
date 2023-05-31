@@ -42,26 +42,6 @@
     margin-right: auto;
     margin-left: auto;
 
-    @media only screen and (max-width: @animatedLayersBlockTabletBreakpoint) {
-      min-width: unset;
-      max-width: unset;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      .column {
-        &.layers-selection,
-        &.layers-result {
-          width: 80% !important;
-          min-width: unset !important;
-          max-width: 500px !important;
-        }
-
-        &.layers-result .layers .layer object {
-          max-width: 100%;
-        }
-      }
-    }
-
     .column {
       position: relative;
       z-index: 2;
@@ -167,6 +147,42 @@
           .layers {
             border: 2px dashed #ccc;
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: @animatedLayersBlockTabletBreakpoint) {
+  .animated-layers-block {
+    .columns {
+      min-width: unset;
+      max-width: unset;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .column {
+        &.layers-selection,
+        &.layers-result {
+          width: 80%;
+          min-width: unset;
+          max-width: 500px;
+        }
+
+        &.layers-selection {
+          .block-title {
+            font-size: 3rem;
+            line-height: 4rem;
+          }
+
+          .block-description {
+            font-size: 1.7rem;
+            line-height: 3rem;
+          }
+        }
+
+        &.layers-result .layers .layer object {
+          max-width: 100%;
         }
       }
     }
