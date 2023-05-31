@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 //noinspection JSUnresolvedReference
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { flattenToAppURL, withBlockExtensions } from '@plone/volto/helpers';
 import './static/style/block.less';
 import { Link } from 'react-router-dom';
