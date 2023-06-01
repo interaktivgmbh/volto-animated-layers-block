@@ -36,7 +36,7 @@ msgid "schema.animationLayer.animation.title"
 msgstr "Animation"
 
 msgid "schema.animationLayer.animation.description"
-msgstr "Wählen Sie die Datei der animierten SVG aus."
+msgstr "Wählen Sie eine externe amimierte SVG aus oder ihre lokale Plone Datei."
 
 msgid "schema.animationLayer.visible.title"
 msgstr "Sichtbar"
@@ -48,7 +48,7 @@ msgid "schema.animationLayer.size.title"
 msgstr "Skalierungsgröße"
 
 msgid "schema.animationLayer.size.description"
-msgstr "Skalierungsfaktor des animierten Layers. Bereich zwischen 0 und 1."
+msgstr "Skalierungsfaktor des animierten Layers. 1 ist die originalle Größe, 2 die 2-fache Größe."
 
 msgid "schema.animationLayer.top.title"
 msgstr "Position oben"

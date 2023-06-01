@@ -23,7 +23,7 @@ const animationLayerSchemaMessages = defineMessages({
   },
   animationDescription: {
     id: 'schema.animationLayer.animation.description',
-    defaultMessage: 'Select the file of the animated SVG.',
+    defaultMessage: 'Set an external animated SVG Link or select own of your own Plone Files.',
   },
   visibleTitle: {
     id: 'schema.animationLayer.visible.title',
@@ -39,7 +39,7 @@ const animationLayerSchemaMessages = defineMessages({
   },
   sizeDescription: {
     id: 'schema.animationLayer.size.description',
-    defaultMessage: 'Scale factor of the animated Layer. Range between 0 and 1.',
+    defaultMessage: 'Scale factor of the animated Layer. E.g. 1 is the original size, 2 is double the size.',
   },
   topTitle: {
     id: 'schema.animationLayer.top.title',
@@ -227,7 +227,7 @@ export const AnimatedLayersSchema = ({ intl }) => ({
         intl?.formatMessage(animatedLayersSchemaMessages.defaultTitle) ||
         animatedLayersSchemaMessages.defaultTitle.defaultMessage ||
         '',
-      fields: ['title', 'description'],
+      fields: ['title', 'description', 'layers', 'buttons'],
     },
   ],
   properties: {
