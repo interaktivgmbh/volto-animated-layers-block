@@ -8,101 +8,101 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: fr\n"
+"Language-Name: France\n"
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
 
 # Config
 msgid "trans_title_animated_layers"
-msgstr ""
+msgstr "Couches Animées"
 
 # Schema - Animation Layer
 msgid "schema.animationLayer.title"
-msgstr ""
+msgstr "Couche d'Animation"
 
 msgid "schema.animationLayer.fieldset.default"
-msgstr ""
+msgstr "Défaut"
 
 msgid "schema.animationLayer.label.title"
-msgstr ""
+msgstr "Étiquette"
 
 msgid "schema.animationLayer.label.description"
-msgstr ""
+msgstr "Étiquette de la case à cocher"
 
 msgid "schema.animationLayer.animation.title"
-msgstr ""
+msgstr "Animation"
 
 msgid "schema.animationLayer.animation.description"
-msgstr ""
+msgstr "Sélectionnez le fichier SVG animé."
 
 msgid "schema.animationLayer.visible.title"
-msgstr ""
+msgstr "Visible"
 
 msgid "schema.animationLayer.visible.description"
-msgstr ""
+msgstr "Visible initialement ?"
 
 msgid "schema.animationLayer.size.title"
-msgstr ""
+msgstr "Taille d'échelle"
 
 msgid "schema.animationLayer.size.description"
-msgstr ""
+msgstr "Facteur d'échelle de la couche animée. Plage entre 0 et 1."
 
 msgid "schema.animationLayer.top.title"
-msgstr ""
+msgstr "Position en haut"
 
 msgid "schema.animationLayer.top.description"
-msgstr ""
+msgstr "Attribut CSS \"top\". La valeur est en pourcentage."
 
 msgid "schema.animationLayer.left.title"
-msgstr ""
+msgstr "Position à gauche"
 
 msgid "schema.animationLayer.left.description"
-msgstr ""
+msgstr "Attribut CSS \"left\". La valeur est en pourcentage."
 
 # Schema - Call to Action Button
 msgid "schema.callToActionButton.title"
-msgstr ""
+msgstr "Bouton"
 
 msgid "schema.callToActionButton.fieldset.default"
-msgstr ""
+msgstr "Défaut"
 
 msgid "schema.callToActionButton.label.title"
-msgstr ""
+msgstr "Étiquette"
 
 msgid "schema.callToActionButton.label.description"
-msgstr ""
+msgstr "Étiquette du lien"
 
 msgid "schema.callToActionButton.link.title"
-msgstr ""
+msgstr "Lien"
 
 msgid "schema.callToActionButton.link.description"
-msgstr ""
+msgstr "Lien externe ou interne"
 
 # Schema - Animated Layers
 msgid "schema.animatedLayers.fieldset.default"
-msgstr ""
+msgstr "Défaut"
 
 msgid "schema.animatedLayers.title.title"
-msgstr ""
+msgstr "Titre"
 
 msgid "schema.animatedLayers.title.description"
-msgstr ""
+msgstr "Titre du bloc (côté gauche)."
 
 msgid "schema.animatedLayers.description.title"
-msgstr ""
+msgstr "Description"
 
 msgid "schema.animatedLayers.description.description"
-msgstr ""
+msgstr "Description du bloc (côté gauche)."
 
 msgid "schema.animatedLayers.layers.title"
-msgstr ""
+msgstr "Couches d'Animation"
 
 msgid "schema.animatedLayers.layers.description"
-msgstr ""
+msgstr "Ajouter des couches d'animation."
 
 msgid "schema.animatedLayers.buttons.title"
-msgstr ""
+msgstr "Boutons d'Appel à l'Action"
 
 msgid "schema.animatedLayers.buttons.description"
-msgstr ""
+msgstr "Ajouter un bouton d'appel à l'action."
