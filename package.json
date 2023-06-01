@@ -1,0 +1,41 @@
+{
+  "name": "@interaktiv/volto-animated-layers-block",
+  "version": "1.0.0",
+  "description": "volto-animated-layers-block: Volto add-on",
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "volto-addon",
+    "volto",
+    "plone",
+    "react"
+  ],
+  "scripts": {
+    "prettier": "./node_modules/.bin/prettier --single-quote --check 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "prettier:fix": "./node_modules/.bin/prettier --single-quote --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "prettier:ci": "./node_modules/.bin/prettier --single-quote --check 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon"
+  },
+  "dependencies": {
+    "@plone/scripts": "*"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 120,
+    "overrides": [
+      {
+        "files": [
+          "*.overrides",
+          "*.variables"
+        ],
+        "options": {
+          "parser": "less"
+        }
+      }
+    ]
+  }
+}
