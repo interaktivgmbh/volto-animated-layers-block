@@ -1,0 +1,24 @@
+#############################################
+# General
+#############################################
+
+stages:
+  - pushrepo
+
+#############################################
+# Deployment
+#############################################
+
+github:
+  stage: pushrepo
+  script:
+    - git config user.email "gitlab-ci@interaktiv.de"
+    - git config user.name "gitlab-ci"
+    - git remote add github https://$ACCESS_TOKEN@github.com/interaktivgmbh/volto-animated-layers-block.git
+    - git checkout $CI_COMMIT_REF_NAME
+    - git add .
+    - git commit -m "Push changes from pipeline"
+    - git push github $CI_COMMIT_REF_NAME
+  only:
+    - master
+  when: on_success
