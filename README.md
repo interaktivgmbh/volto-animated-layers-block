@@ -1,4 +1,4 @@
-# volto-download-block
+# Volto Animated Layers Block
 
 The Volto block offers a solution for adding animated SVGs as layers on top of each
 other to give your frontpage a unique look. You have the flexibility to either utilize
