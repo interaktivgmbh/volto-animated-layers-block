@@ -12,7 +12,7 @@ stages:
 github:
   stage: pushrepo
   before_script:
-    - apt-get update && apt-get install -y git
+    - apk add --no-cache git
   script:
     - git config user.email "gitlab-ci@interaktiv.de"
     - git config user.name "gitlab-ci"
