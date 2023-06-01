@@ -10,3 +10,7 @@ the addon "interaktiv.volto_animated_layers_block" for the integration to work.
 ## Build on
 ![Plone](https://img.shields.io/badge/Plone-6.0.x-blue.svg)
 ![Volto](https://img.shields.io/badge/Volto-16.x.x-yellow.svg)
+
+
+## Preview
+![preview](preview.gif)
