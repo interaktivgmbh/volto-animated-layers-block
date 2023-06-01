@@ -7,7 +7,7 @@ import configureStore from 'redux-mock-store';
 //noinspection JSUnresolvedFunction, NpmUsedModulesInstalled
 import config from '@plone/volto/registry';
 import { Provider } from 'react-intl-redux';
-
+import animationLayerSchemaMessages from '../Schema';
 const mockStore = configureStore();
 
 //noinspection JSUnresolvedFunction

@@ -124,23 +124,23 @@ const animatedLayersSchemaMessages = defineMessages({
 });
 
 export const AnimationLayerSchema = ({ intl }) => ({
-  title: intl.formatMessage(animationLayerSchemaMessages.titleLabel),
+  title: intl?.formatMessage(animationLayerSchemaMessages.titleLabel) || '',
   fieldsets: [
     {
       id: 'default',
-      title: intl.formatMessage(animationLayerSchemaMessages.fieldsetDefault),
+      title: intl?.formatMessage(animationLayerSchemaMessages.fieldsetDefault) || '',
       fields: ['label', 'animation', 'visible', 'size', 'top', 'left'],
     },
   ],
   properties: {
     label: {
-      title: intl.formatMessage(animationLayerSchemaMessages.labelTitle),
-      description: intl.formatMessage(animationLayerSchemaMessages.labelDescription),
+      title: intl?.formatMessage(animationLayerSchemaMessages.labelTitle) || '',
+      description: intl?.formatMessage(animationLayerSchemaMessages.labelDescription) || '',
       default: '',
     },
     animation: {
-      title: intl.formatMessage(animationLayerSchemaMessages.animationTitle),
-      description: intl.formatMessage(animationLayerSchemaMessages.animationDescription),
+      title: intl?.formatMessage(animationLayerSchemaMessages.animationTitle) || '',
+      description: intl?.formatMessage(animationLayerSchemaMessages.animationDescription) || '',
       widget: 'object_browser',
       widgetOptions: {
         pattern_options: { selectableTypes: ['File'] },
@@ -150,47 +150,65 @@ export const AnimationLayerSchema = ({ intl }) => ({
       allowExternals: true,
     },
     visible: {
-      title: intl.formatMessage(animationLayerSchemaMessages.visibleTitle),
-      description: intl.formatMessage(animationLayerSchemaMessages.visibleDescription),
+      title: intl?.formatMessage(animationLayerSchemaMessages.visibleTitle) || '',
+      description: intl?.formatMessage(animationLayerSchemaMessages.visibleDescription) || '',
       type: 'boolean',
     },
     size: {
-      title: intl.formatMessage(animationLayerSchemaMessages.sizeTitle),
-      description: intl.formatMessage(animationLayerSchemaMessages.sizeDescription),
+      title: intl?.formatMessage(animationLayerSchemaMessages.sizeTitle) || '',
+      description: intl?.formatMessage(animationLayerSchemaMessages.sizeDescription) || '',
       default: '1.0',
     },
     top: {
-      title: intl.formatMessage(animationLayerSchemaMessages.topTitle),
-      description: intl.formatMessage(animationLayerSchemaMessages.topDescription),
+      title: intl?.formatMessage(animationLayerSchemaMessages.topTitle) || '',
+      description: intl?.formatMessage(animationLayerSchemaMessages.topDescription) || '',
       default: '0',
     },
     left: {
-      title: intl.formatMessage(animationLayerSchemaMessages.leftTitle),
-      description: intl.formatMessage(animationLayerSchemaMessages.leftDescription),
+      title: intl?.formatMessage(animationLayerSchemaMessages.leftTitle) || '',
+      description: intl?.formatMessage(animationLayerSchemaMessages.leftDescription) || '',
       default: '0',
     },
   },
   required: ['label', 'animation'],
 });
 
-const CallToActionButtonSchema = ({ intl }) => ({
-  title: intl.formatMessage(callToActionButtonSchemaMessages.buttonTitle),
+export const CallToActionButtonSchema = ({ intl }) => ({
+  title:
+    intl?.formatMessage(callToActionButtonSchemaMessages.buttonTitle) ||
+    callToActionButtonSchemaMessages.buttonTitle.defaultMessage ||
+    '',
   fieldsets: [
     {
       id: 'default',
-      title: intl.formatMessage(callToActionButtonSchemaMessages.buttonFieldsetDefault),
+      title:
+        intl?.formatMessage(callToActionButtonSchemaMessages.buttonFieldsetDefault) ||
+        callToActionButtonSchemaMessages.buttonFieldsetDefault.defaultMessage ||
+        '',
       fields: ['label', 'link'],
     },
   ],
   properties: {
     label: {
-      title: intl.formatMessage(callToActionButtonSchemaMessages.buttonLabelTitle),
-      description: intl.formatMessage(callToActionButtonSchemaMessages.buttonLabelDescription),
+      title:
+        intl?.formatMessage(callToActionButtonSchemaMessages.buttonLabelTitle) ||
+        callToActionButtonSchemaMessages.buttonLabelTitle.defaultMessage ||
+        '',
+      description:
+        intl?.formatMessage(callToActionButtonSchemaMessages.buttonLabelDescription) ||
+        callToActionButtonSchemaMessages.buttonLabelDescription.defaultMessage ||
+        '',
       default: '',
     },
     link: {
-      title: intl.formatMessage(callToActionButtonSchemaMessages.buttonLinkTitle),
-      description: intl.formatMessage(callToActionButtonSchemaMessages.buttonLinkDescription),
+      title:
+        intl?.formatMessage(callToActionButtonSchemaMessages.buttonLinkTitle) ||
+        callToActionButtonSchemaMessages.buttonLinkTitle.defaultMessage ||
+        '',
+      description:
+        intl?.formatMessage(callToActionButtonSchemaMessages.buttonLinkDescription) ||
+        callToActionButtonSchemaMessages.buttonLinkDescription.defaultMessage ||
+        '',
       widget: 'object_browser',
       mode: 'single',
       return: 'single',
@@ -205,30 +223,49 @@ export const AnimatedLayersSchema = ({ intl }) => ({
   fieldsets: [
     {
       id: 'default',
-      title: intl.formatMessage(animatedLayersSchemaMessages.defaultTitle),
-      fields: ['title', 'description', 'layers', 'buttons'],
+      title:
+        intl?.formatMessage(animatedLayersSchemaMessages.defaultTitle) ||
+        animatedLayersSchemaMessages.defaultTitle.defaultMessage ||
+        '',
+      fields: ['title', 'description'],
     },
   ],
   properties: {
     title: {
-      title: intl.formatMessage(animatedLayersSchemaMessages.titleLabel),
-      description: intl.formatMessage(animatedLayersSchemaMessages.titleDescription),
+      title:
+        intl?.formatMessage(animatedLayersSchemaMessages.titleLabel) ||
+        animatedLayersSchemaMessages.titleLabel.defaultMessage,
+      description:
+        intl?.formatMessage(animatedLayersSchemaMessages.titleDescription) ||
+        animatedLayersSchemaMessages.titleDescription.defaultMessage,
       default: '',
     },
     description: {
-      title: intl.formatMessage(animatedLayersSchemaMessages.descriptionLabel),
-      description: intl.formatMessage(animatedLayersSchemaMessages.descriptionDescription),
+      title:
+        intl?.formatMessage(animatedLayersSchemaMessages.descriptionLabel) ||
+        animatedLayersSchemaMessages.descriptionLabel.defaultMessage,
+      description:
+        intl?.formatMessage(animatedLayersSchemaMessages.descriptionDescription) ||
+        animatedLayersSchemaMessages.descriptionDescription.defaultMessage,
       default: '',
     },
     layers: {
-      title: intl.formatMessage(animatedLayersSchemaMessages.layersTitle),
-      description: intl.formatMessage(animatedLayersSchemaMessages.layersDescription),
+      title:
+        intl?.formatMessage(animatedLayersSchemaMessages.layersTitle) ||
+        animatedLayersSchemaMessages.layersTitle.defaultMessage,
+      description:
+        intl?.formatMessage(animatedLayersSchemaMessages.layersDescription) ||
+        animatedLayersSchemaMessages.layersDescription.defaultMessage,
       schema: AnimationLayerSchema({ intl }),
       widget: 'object_list',
     },
     buttons: {
-      title: intl.formatMessage(animatedLayersSchemaMessages.buttonsTitle),
-      description: intl.formatMessage(animatedLayersSchemaMessages.buttonsDescription),
+      title:
+        intl?.formatMessage(animatedLayersSchemaMessages.buttonsTitle) ||
+        animatedLayersSchemaMessages.buttonsTitle.defaultMessage,
+      description:
+        intl?.formatMessage(animatedLayersSchemaMessages.buttonsDescription) ||
+        animatedLayersSchemaMessages.buttonsDescription.defaultMessage,
       schema: CallToActionButtonSchema({ intl }),
       widget: 'object_list',
     },

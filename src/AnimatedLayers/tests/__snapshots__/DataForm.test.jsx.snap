@@ -26,22 +26,6 @@ exports[`AnimatedLayersDataForm renders AnimatedLayersDataForm component 1`] = `
          - 
         Description of the Block (left side).
       </div>
-      <div
-        className="mocked-default-widget"
-        id="mocked-field-layers"
-      >
-        Animation Layers
-         - 
-        Add Animation Layers.
-      </div>
-      <div
-        className="mocked-default-widget"
-        id="mocked-field-buttons"
-      >
-        Call to Action Buttons
-         - 
-        Add a Call to Action Button.
-      </div>
     </div>
   </div>
 </div>
